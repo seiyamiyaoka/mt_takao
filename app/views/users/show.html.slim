@@ -1,0 +1,8 @@
+h1 マイページ
+- if @user.name.nil?
+  = link_to "プロフィールを登録する", edit_mount_user_path(@user)
+- else
+  p 名前
+  = @user.name
+  p = link_to "待ち合わせ日を作成する", new_promise_path
+  p = link_to "lets mt_takao!", reculutements_path

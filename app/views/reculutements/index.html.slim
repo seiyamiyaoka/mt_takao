@@ -1,0 +1,3 @@
+h2 募集している人
+- @promises.each do |promise|
+  = button_to promise.user.name, reculutements_path, params: { user_id: promise.user.id, promise_id: promise.id }

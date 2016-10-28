@@ -1,0 +1,5 @@
+h1 ユーザ編集画面
+= form_for @user, url: mount_user_path(@user)  do |f|
+  p = f.label :name
+  = f.text_field :name
+  = f.submit "編集する"

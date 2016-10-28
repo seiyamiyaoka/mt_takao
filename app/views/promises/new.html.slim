@@ -1,0 +1,9 @@
+h1 山のぼる日にち登録
+= form_for @promise do |f|
+  = f.label :promise_time
+  = f.date_select :promise_time, use_month_numbers: true,
+          start_year:     2016,
+          end_year:       (Time.now.year + 18),
+          default:        Date.new(1989, 1, 1),
+          date_separator: '/'
+  p = f.submit "登録"
