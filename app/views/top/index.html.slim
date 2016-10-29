@@ -1,12 +1,5 @@
-.container
-  row
-  header
-  = image_tag "http://find-travel.cdn-dena.com/picture/articlebody/28576", class: "image-responsive"
-  h1 Mt.takao.meet
-  p このサイトは高尾山に登る人のためのサイトです。lets, takao life!
-  - if user_signed_in?
-    li = link_to 'ログアウト', destroy_user_session_path, method: :delete
-    li = link_to 'マイページ', edit_mount_user_path(current_user.id)
-    li = link_to '待ち合わせ'
-  - else
-    li = link_to 'ログイン', new_user_session_path
+.top
+  .top__menu
+    h2.top__title そうだ。高尾山に登ろう。
+    p.top__msg このサイトは高尾山に登る人のためのサイトです。lets, takao life!
+    = link_to '会員登録', new_user_registration_path, class: 'large_sign_up_btn' 
