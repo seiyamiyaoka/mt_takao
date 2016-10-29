@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   has_many :participations, class_name: User, foreign_key: 'participation_id'
 
   def self.get_participations(user)
-    reculutements = Reculutement.participations_all(user)
-    reculutement_users = reculutements.map(&:id)
-    user = self.find(reculutement_users)
+    promises_id = Promise.where(user_id: user.id).pluck(:id)
+    reculutements_participation_id = Reculutement.where(promise_id: promises_id).pluck(:participation_id)
+    User.find(reculutements_participation_id)
   end
 end

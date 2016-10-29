@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20161027141520) do
 
   create_table "promises", force: :cascade do |t|
-    t.date     "promise_time"
+    t.datetime "promise_time"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20161027141520) do
   create_table "reculutements", force: :cascade do |t|
     t.integer  "participation_id"
     t.integer  "promise_id"
+    t.boolean  "result"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
