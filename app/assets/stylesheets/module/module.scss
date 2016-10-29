@@ -1,0 +1,24 @@
+@import 'base/mixins';
+
+.large_sign_up_btn {
+  display: block;
+  width: 50%;
+  margin: 30px auto;
+  padding: .6em 1.1em;
+  font-size: 26px;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  background-color: #FE4365;
+  border-radius: 3px;
+  box-shadow: 0 0 0 -2px #CFF09E, 0 0 0 -1px #FE4365;
+  border: none;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition:box-shadow .3s;
+  &:hover, &:focus {
+    box-shadow: 0 0 0 2px #CFF09E, 0 0 0 4px darken(#FF1D74, 5%);
+    @include transition-timing-function(cubic-bezier(.6,4,.3,.8));
+    @include animation (gelatine .5s 1);
+  }
+}

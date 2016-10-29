@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title MtTakao
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    .l-wrapper
+      header.l-header
+        h1.header__logo Mt.takao
+        ul.header__nav
+          - if user_signed_in?
+            li.header__nav__item = link_to 'ログアウト', destroy_user_session_path, method: :delete
+            li.header__nav__item = link_to 'マイページ', edit_mount_user_path(current_user.id)
+            li.header__nav__item = link_to '待ち合わせ'
+          - else
+            li.header__nav__item = link_to 'ログイン', new_user_session_path
+      .l-main
+        = yield
+
+      footer.l-footer © Mt.Takao. 2016 All RIGHTS RESERVED.
