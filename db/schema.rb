@@ -23,11 +23,10 @@ ActiveRecord::Schema.define(version: 20161027141520) do
   add_index "promises", ["user_id"], name: "index_promises_on_user_id"
 
   create_table "reculutements", force: :cascade do |t|
-    t.integer  "participation_user_id"
-    t.integer  "subscription_user_id"
+    t.integer  "participation_id"
     t.integer  "promise_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "users", force: :cascade do |t|
