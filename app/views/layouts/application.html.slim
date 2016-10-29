@@ -12,7 +12,7 @@ html
         ul.header__nav
           - if user_signed_in?
             li.header__nav__item = link_to 'ログアウト', destroy_user_session_path, method: :delete
-            li.header__nav__item = link_to 'マイページ', edit_mount_user_path(current_user.id)
+            li.header__nav__item = link_to 'マイページ', mount_user_path(current_user.id)
             li.header__nav__item = link_to '待ち合わせ'
           - else
             li.header__nav__item = link_to 'ログイン', new_user_session_path

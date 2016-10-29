@@ -1,5 +1,8 @@
 class MountUsersController < ApplicationController
   before_action :set_user, only: [:edit, :update]
+  def new
+    #code
+  end
   def show
     @user = User.find(params[:id])
   end
