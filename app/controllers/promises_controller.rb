@@ -10,6 +10,6 @@ class PromisesController < ApplicationController
   end
   private
   def params_promise
-    params.require(:promise).permit(:promise_time)
+    params.require(:promise).permit(:promise_time, :meet_time)
   end
 end

@@ -1,0 +1,5 @@
+p = link_to "my_takao", { name: "my" }
+p = link_to "your_takao", { name: "your" }
+- if @participations.present?
+  - @participations.each do |user|
+    = user.name

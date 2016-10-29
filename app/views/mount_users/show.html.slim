@@ -6,5 +6,6 @@ h1 マイページ
   = @user.name
   p = link_to "待ち合わせ日を作成する", new_promise_path
   p = link_to "lets mt_takao!", reculutements_path
-  - if Reculutement.where(participation_user_id: current_user.id)
-    p = link_to "お誘いがあります確認しましょう", reculutement_index_reculutements_path
+  p = link_to "待ち合わせの確認をする", participants_path
+  - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
+    p = link_to "希望者がいます確認しましょう", reculutement_index_reculutements_path

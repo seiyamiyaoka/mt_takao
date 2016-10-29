@@ -3,6 +3,7 @@ class CreateReculutements < ActiveRecord::Migration
     create_table :reculutements do |t|
       t.references :participation
       t.references :promise
+      t.boolean :result
 
       t.timestamps null: false
     end
