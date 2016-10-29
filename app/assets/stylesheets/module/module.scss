@@ -46,6 +46,41 @@
   }
 }
 
+.form__btn {
+  position: relative;
+  z-index: 2;
+  background-color: #333;
+  border: 2px solid #333;
+  color: #fff;
+  line-height: 30px;
+
+  &:hover {
+    background-color: #fff;
+    border-color: #59b1eb;
+    color: #59b1eb;
+  }
+
+  &:before,&:after {
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #333;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:hover::before,&:hover::after {
+    height: 0;
+    background-color: #59b1eb;
+  }
+}
+
 .form__label {
   display: block;
   font-size: 14px;
@@ -59,4 +94,17 @@
   width: 80%;
   margin: 0 auto 10px auto;
   line-height: 24px;
+}
+
+.form__select {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #999;
+  background: #eee;
+  background: -webkit-linear-gradient(top, #fff 0%,#efebe1 100%);
+  background: linear-gradient(to bottom, #fff 0%,#efebe1 100%);
 }

@@ -9,6 +9,8 @@ ja:
         password: パスワード
         password_confirmation: パスワード(確認用)
         remember_me: ログインを保持
+      promise:
+        promise_time: 登山予定日
     errors:
         messages:
           record_invalid: "バリデーションに失敗しました: %{errors}"
