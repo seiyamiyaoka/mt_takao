@@ -1,3 +1,29 @@
 .verify
   .verify__menu
-    
+    .verify__form
+      h2.verify__title ログイン
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = devise_error_messages!
+        .verify__field
+          = f.label :email, class: 'form__label'
+          = f.email_field :email, autofocus: true, class: 'form__text__box'
+        .verify__field
+          = f.label :password, class: 'form__label'
+          = f.password_field :password, class: 'form__text__box', autocomplete: "off"
+        - if devise_mapping.rememberable?
+          .verify__field
+            .verify__remember
+              = f.check_box :remember_me
+              = f.label :remember_me, class: 'verify__remember__label'
+        .verify__action
+          = f.submit "ログイン", class: 'devise_btn'
+        .verify__field
+          = link_to '新規会員登録', new_user_registration_path, class: 'verify__link'
+          = link_to 'パスワードをお忘れの方', new_user_password_path, class: 'verify__link'
+
+    .verify__description
+      h2.verify__title 高尾山とは
+      p.verify__takao__msg 
+        | 高尾山は、東京都八王子市にある標高599mの山である。東京都心から近く、年間を通して多くの観光客や登山者が訪れる。古くから修験道の霊山とされた。
+        br  
+        | (出典：ウィキペディア)

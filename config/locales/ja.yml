@@ -8,6 +8,7 @@ ja:
         name: ユーザー名
         password: パスワード
         password_confirmation: パスワード(確認用)
+        remember_me: ログインを保持
     errors:
         messages:
           record_invalid: "バリデーションに失敗しました: %{errors}"

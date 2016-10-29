@@ -26,6 +26,7 @@
       bottom: 0;
       left: 0;
       width: 75%;
+      max-width: 850px;
       height: 65%;
       background: #fff;
       margin: auto auto 150px auto;
@@ -55,7 +56,7 @@
     }
 
     &__action {
-      margin: 50px 0 0 0;
+      margin: 40px 0 0 0;
     }
 
     &__takao__msg {
@@ -64,6 +65,23 @@
       margin: 40px auto 0 auto;
       line-height: 30px;
       letter-spacing: 2px;
+    }
+
+    &__remember {
+      margin: 10px auto 10px auto;
+      width: 80%;
+
+      &__label {
+        font-size: 12px;
+      }
+    }
+
+    &__link {
+      display: block;
+      font-size: 14px;
+      margin: 10px auto 10px auto;
+      width: 80%;
+      text-decoration: none;
     }
   }
 }
