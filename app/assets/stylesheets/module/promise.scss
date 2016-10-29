@@ -1,0 +1,67 @@
+.promise {
+  height: 100%;
+
+  @at-root {
+    &__heading__wrapper {
+      background: image-url("takao.jpg") no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      height: 55%;
+
+      &:before {
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: ' ';
+      }
+    }
+
+    &__heading__content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 75%;
+      height: 30%;
+      margin: auto;
+    }
+
+    &__title {
+      color: #fff;
+      text-align: center;
+      font-size: 36px;
+      line-height: 100px;
+    }
+
+    &__label {
+      display: block;
+      font-size: 14px;
+      margin: 10px auto 10px auto;
+      width: 100%;
+    }
+
+    &__select__area {
+      margin: 20px auto;
+    }
+
+    &__select {
+      width: 60px;
+      margin: 0 0 0 10px;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &__field {
+      width: 80%;
+      margin: 30px auto 0 auto;
+    }
+  }
+}
