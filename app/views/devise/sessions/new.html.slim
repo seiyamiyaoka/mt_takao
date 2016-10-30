@@ -1,25 +1,26 @@
 .verify
   .verify__menu
     .verify__form
-      h2.verify__title ログイン
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        = devise_error_messages!
-        .verify__field
-          = f.label :email, class: 'form__label'
-          = f.email_field :email, autofocus: true, class: 'form__text__box'
-        .verify__field
-          = f.label :password, class: 'form__label'
-          = f.password_field :password, class: 'form__text__box', autocomplete: "off"
-        - if devise_mapping.rememberable?
+      .verify__form__container
+        h2.verify__title ログイン
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = devise_error_messages!
           .verify__field
-            .verify__remember
-              = f.check_box :remember_me
-              = f.label :remember_me, class: 'verify__remember__label'
-        .verify__action
-          = f.submit "ログイン", class: 'devise_btn'
-        .verify__field
-          = link_to '新規会員登録', new_user_registration_path, class: 'verify__link'
-          = link_to 'パスワードをお忘れの方', new_user_password_path, class: 'verify__link'
+            = f.label :email, class: 'form__label'
+            = f.email_field :email, autofocus: true, class: 'form__text__box'
+          .verify__field
+            = f.label :password, class: 'form__label'
+            = f.password_field :password, class: 'form__text__box', autocomplete: "off"
+          - if devise_mapping.rememberable?
+            .verify__field
+              .verify__remember
+                = f.check_box :remember_me
+                = f.label :remember_me, class: 'verify__remember__label'
+          .verify__action
+            = f.submit "ログイン", class: 'devise_btn'
+          .verify__field
+            = link_to '新規会員登録', new_user_registration_path, class: 'verify__link'
+            = link_to 'パスワードをお忘れの方', new_user_password_path, class: 'verify__link'
 
     .verify__description
       h2.verify__title 高尾山とは

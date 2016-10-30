@@ -85,13 +85,13 @@
   display: block;
   font-size: 14px;
   margin: 10px auto 10px auto;
-  width: 80%;
+  width: 100%;
 }
 
 .form__text__box {
   display: block;
   font-size: 14px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto 10px auto;
   line-height: 24px;
 }
@@ -107,4 +107,41 @@
   background: #eee;
   background: -webkit-linear-gradient(top, #fff 0%,#efebe1 100%);
   background: linear-gradient(to bottom, #fff 0%,#efebe1 100%);
+}
+
+.heading__wrapper {
+  background: image-url("takao.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 55%;
+
+  &:before {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+  }
+}
+
+.heading__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 30%;
+  margin: auto;
+}
+
+.heading__title {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  line-height: 100px;
 }
