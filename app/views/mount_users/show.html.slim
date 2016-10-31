@@ -1,11 +1,20 @@
-h1 マイページ
-- if @user.name.nil?
-  = link_to "プロフィールを登録する", edit_mount_user_path(@user)
-- else
-  p 名前
-  = @user.name
-  p = link_to "待ち合わせ日を作成する", new_promise_path
-  p = link_to "lets mt_takao!", reculutements_path
-  p = link_to "待ち合わせの確認をする", participants_path
-  - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
-    p = link_to "希望者がいます確認しましょう", reculutement_index_reculutements_path
+.mypage
+  .heading__wrapper
+    .heading__content
+      .mypage__information
+        h2.mypage__title #{@user.name} さんのマイページ
+        .mypage__my_image
+
+        .mypage__my_info
+          p ひとこと
+          p = link_to "プロフィールを登録する", edit_mount_user_path(@user)
+  .mypage__menu
+    .mypage__menu__item
+      = link_to "待ち合わせ日を作成する", new_promise_path, class: 'round__btn__lg mypage__btn'
+    .mypage__menu__item
+      = link_to "lets mt_takao!", reculutements_path, class: 'round__btn__lg mypage__btn'
+    .mypage__menu__item
+      = link_to "待ち合わせの確認をする", participants_path, class: 'round__btn__lg mypage__btn'
+    .mypage__menu__item
+      - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
+        = link_to "希望者がいます確認しましょう", reculutement_index_reculutements_path, class: 'round__btn__lg mypage__btn'

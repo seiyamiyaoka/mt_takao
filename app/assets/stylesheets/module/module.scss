@@ -81,6 +81,31 @@
   }
 }
 
+.round__btn__lg {
+  width: 70%;
+  height: 70%;
+  background: #FFF;
+  border: 1px solid #2a82a3;
+  border-radius: 160px;
+  -moz-border-radius: 160px;
+  -webkit-border-radius: 160px;
+  margin: 0 auto;
+  color: #2a82a3;
+  padding: 42px 20px 20px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.5s ease-in;
+  -webkit-transition: background-color 0.5s ease-in;
+
+  &:hover {
+    background: #2a82a3;
+    color: #FFF;
+    border: 1px solid #FFF;
+  }
+}
+
 .form__label {
   display: block;
   font-size: 14px;
