@@ -1,4 +1,4 @@
-lock '3.6.0'
+lock '3.6.1'
 
 # デプロイするアプリケーション名
 set :application, 'mt_takao'
@@ -10,7 +10,7 @@ set :repo_url, 'https://github.com/seiyamiyaoka/mt_takao.git'
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/mt_taka'
+set :deploy_to, '/var/www/mt_takao'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
