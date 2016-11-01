@@ -20,7 +20,8 @@ gem "font-awesome-rails"
 
 # configuration
 gem 'config'
-
+gem 'dotenv'
+gem 'unicorn'
 # verify
 gem 'devise'
 

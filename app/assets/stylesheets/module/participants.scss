@@ -1,0 +1,18 @@
+.participant__main {
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: none;
+  .name {
+    margin: 10px;
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  &user {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+  }
+}
