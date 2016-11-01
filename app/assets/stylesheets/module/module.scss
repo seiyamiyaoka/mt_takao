@@ -81,16 +81,16 @@
   }
 }
 
-.round__btn__lg {
-  width: 70%;
-  height: 70%;
-  background: #FFF;
-  border: 1px solid #2a82a3;
-  border-radius: 160px;
-  -moz-border-radius: 160px;
-  -webkit-border-radius: 160px;
+.round__btn {
+  width: 150px;
+  height: 130px;
+  background: #2a82a3;
+  border: 1px solid #fff;
+  border-radius: 150px;
+  -moz-border-radius: 150px;
+  -webkit-border-radius: 150px;
   margin: 0 auto;
-  color: #2a82a3;
+  color: #fff;
   padding: 42px 20px 20px;
   display: block;
   text-align: center;
@@ -100,9 +100,9 @@
   -webkit-transition: background-color 0.5s ease-in;
 
   &:hover {
-    background: #2a82a3;
-    color: #FFF;
-    border: 1px solid #FFF;
+    background: #fff;
+    color: #2a82a3;
+    border: 1px solid #2a82a3;
   }
 }
 

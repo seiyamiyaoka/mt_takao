@@ -22,17 +22,55 @@
       padding: 7px 10px;
     }
 
-    &__my_image {
+    &__my_prof {
       float: left;
       width: 20%;
       height: calc(100% - 32px);
+      position: relative;
+
+      &__image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 90px;
+        height: 90px;
+        margin: auto;
+      }
     }
 
     &__my_info {
       float: left;
       width: calc(80% - 1px);
       height: calc(100% - 32px);
-      border-left: solid 1px #000;
+      position: relative;
+
+      &__title {
+        margin: 10px 5px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      &__msg {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        border: 1px solid #000;
+      }
+
+      &__link {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+        a {
+          text-decoration: none;
+        }
+      }
     }
     
     &__menu {
@@ -51,6 +89,15 @@
         height: 90%;
         float: left;
       }
+    }
+
+    &__btn__icon {
+      height: 20px;
+      width: 20px;
+    }
+
+    &__btn {
+      line-height: 30px;
     }
   }
 }
