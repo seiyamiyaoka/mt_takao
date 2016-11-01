@@ -1,10 +1,10 @@
 .promise
-  .promise__heading__wrapper
-    .promise__heading__content
-      h2.promise__title 山のぼる日にちを決めよう
+  .heading__wrapper
+    .heading__content
+      h2.heading__title 山のぼる日にちを決めよう
   = form_for @promise do |f|
     .promise__field
-      = f.label :promise_time, class: 'promise__label'
+      = f.label :promise_time, class: 'form__label'
       .promise__select__area
         = f.datetime_select :promise_time, { use_month_numbers: true,
                 start_year:     2016,

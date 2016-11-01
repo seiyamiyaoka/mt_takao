@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "twitter-bootstrap-rails"
 gem 'slim-rails'
 gem 'kaminari'
+gem "font-awesome-rails"
 
 # configuration
 gem 'config'
