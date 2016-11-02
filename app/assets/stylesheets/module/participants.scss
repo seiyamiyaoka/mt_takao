@@ -1,18 +1,15 @@
-.participant__main {
-  text-align: center;
-  padding-top: 20px;
-  text-decoration: none;
-  .name {
-    margin: 10px;
-  }
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  &user {
-    float: left;
-    width: 32%;
-    margin-right: 2%;
+.participant {
+  @at-root {
+    &__select__area {
+      margin: 0 0 20px 0;
+    }
+
+    &__btn {
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 10px 0 0;
+      padding: 0 10px;
+    }
   }
 }

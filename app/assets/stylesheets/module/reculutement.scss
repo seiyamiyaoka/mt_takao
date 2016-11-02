@@ -1,15 +1,17 @@
-.reculutement__main {
-  text-align: center;
-  padding-top: 20px;
-  text-decoration: none;
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  &user {
-    float: left;
-    width: 32%;
-    margin-right: 2%;
+.reculutement {
+  @at-root {
+    &__btn__area {
+      float: left;
+      width: 15%;
+    }
+
+    &__btn {
+      display: block;
+      padding: 2px;
+      font-size: 12px;
+      text-align: center;
+      text-decoration: none;
+      margin: 0 0 5px 0;
+    }
   }
 }

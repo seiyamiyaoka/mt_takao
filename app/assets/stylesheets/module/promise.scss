@@ -19,5 +19,18 @@
       width: 80%;
       margin: 30px auto 0 auto;
     }
+
+    &__title {
+      font-size: 28px;
+      letter-spacing: 4px;
+      padding: 10px 0;
+    }
+
+    &__button {
+      width: 100px;
+      position: absolute;
+      right: 20px;
+      top: 30px;
+    }
   }
 }

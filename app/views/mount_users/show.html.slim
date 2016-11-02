@@ -16,7 +16,7 @@
         br
         | 作成する
     .mypage__menu__item
-      = link_to reculutements_path, class: 'round__btn mypage__btn' do
+      = link_to promises_path, class: 'round__btn mypage__btn' do
         | Let's mt_takao!
     .mypage__menu__item
       = link_to participants_path, class: 'round__btn mypage__btn' do
@@ -25,5 +25,5 @@
         | 確認する
     .mypage__menu__item
       - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
-        = link_to reculutement_index_reculutements_path, class: 'round__btn mypage__btn' do
+        = link_to reculutements_path, class: 'round__btn mypage__btn' do
           | 希望者を確認する

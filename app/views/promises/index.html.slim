@@ -1,0 +1,16 @@
+.l-container
+  h2.promise__title 募集している人
+  ul.default__list
+    - @promises.each do |promise|
+      li.default__list__item
+        .list__profile
+          = image_tag get_image(promise.user), class: 'list__profile__image'
+        .list__profile__info
+          p.list__profile__info__subject 一緒に高尾山に登りましょう
+          p.list__profile__info__text
+            'ユーザ名：
+            = get_user_name(promise.user.name)
+          p.list__profile__info__text
+            '集合時間：
+            = l(promise.promise_time, format: :promise)
+          = button_to '一緒に登りたい', reculutements_path, params: { user_id: promise.user.id, promise_id: promise.id }, class: 'form__btn promise__button'
