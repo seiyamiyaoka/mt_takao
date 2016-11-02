@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
   end
   resources :participants, only:[:index]
-  resources :promises, only:[:new, :create]
+  resources :promises, only:[:new, :create, :index]
   resources :mount_users, only:[:show, :edit, :update]
 
   devise_for :users
