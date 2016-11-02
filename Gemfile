@@ -25,6 +25,9 @@ gem 'unicorn'
 # verify
 gem 'devise'
 
+# analy
+gem 'google-analytics-rails', '1.1.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'

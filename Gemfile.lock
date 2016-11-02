@@ -126,6 +126,7 @@ GEM
       railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    google-analytics-rails (1.1.0)
     hirb (0.7.3)
     hirb-unicode (0.0.5)
       hirb (~> 0.5)
@@ -349,6 +350,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   font-awesome-rails
+  google-analytics-rails (= 1.1.0)
   hirb
   hirb-unicode
   jbuilder (~> 2.0)
