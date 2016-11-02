@@ -26,64 +26,11 @@
       padding: 10px 0;
     }
 
-    &__list {
-      &__item {
-        height: 80px;
-        padding: 10px;
-        position: relative;
-        list-style-type: none;
-        border: 1px solid #000;
-        margin: 0 0 20px 0;
-      }
-    }
-
-    &__prof {
-      height: 100%;
-      float:left;
-      width: 90px;
-      margin: 0 10px 0 0;
-      position: relative;
-
-      &__image {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 80px;
-        height: 80px;
-      }
-    }
-
-    &__info {
-      height: 100%;
-      width: 69%;
-      float:left;
-
-      &__subject {
-        height: 20px;
-        line-height: 20px;
-        padding: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        margin: 0 0 5px 0;
-      }
-
-      &__text {
-        padding: 3px;
-        margin: 3px;
-        font-size: 14px;
-        letter-spacing: 2px;
-      }
-
-      &__button {
-        width: 100px;
-        position: absolute;
-        right: 20px;
-        top: 30px;
-      }
+    &__button {
+      width: 100px;
+      position: absolute;
+      right: 20px;
+      top: 30px;
     }
   }
 }

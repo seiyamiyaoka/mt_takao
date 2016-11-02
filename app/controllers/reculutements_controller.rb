@@ -1,6 +1,6 @@
 class ReculutementsController < ApplicationController
   def index
-    @promises = Promise.where.not(user_id: current_user.id)
+    @users = User.get_participations(current_user)
   end
 
   def show
@@ -17,10 +17,6 @@ class ReculutementsController < ApplicationController
 
   def edit
     redirect_to :update
-  end
-
-  def reculutement_index
-    @users = User.get_participations(current_user)
   end
 
   def update

@@ -1,3 +1,15 @@
-h2 募集している人
-- @promises.each do |promise|
-  = button_to promise.user.name, reculutements_path, params: { user_id: promise.user.id, promise_id: promise.id }
+.l-container
+  h2.promise__title あなたの募集の希望者
+  ul.default__list
+    - @users.each do |reculutement|
+      li.default__list__item
+        .list__profile
+          = image_tag get_image(reculutement), class: 'list__profile__image'
+        .list__profile__info
+          p.list__profile__info__text
+            'ユーザ名：
+            = get_user_name(reculutement.name)
+          p.list__profile__info__text ひとこと：よろしくお願いします！
+        .reculutement__btn__area
+          = link_to "一緒に登る", reculutement_path(reculutement, result: "ok"), method: :put, class: 'form__btn reculutement__btn'
+          = link_to "拒否", reculutement_path(reculutement, result: "no"), method: :put, class: 'form__btn reculutement__btn'
