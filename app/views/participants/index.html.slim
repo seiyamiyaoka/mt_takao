@@ -1,5 +1,20 @@
-p = link_to "my_takao", { name: "my" }
-p = link_to "your_takao", { name: "your" }
-- if @participations.present?
-  - @participations.each do |user|
-    = user.name
+.l-container
+  .participant__select__area
+    = link_to "主催一覧", { name: "my" }, class: 'form__btn participant__btn'
+    = link_to "参加一覧", { name: "your" }, class: 'form__btn participant__btn'
+  ul.default__list
+    - if @participations.present?
+      - @participations.each do |user|
+        li.default__list__item
+          .list__profile
+            = image_tag get_image(user), class: 'list__profile__image'
+          .list__profile__info
+            p.list__profile__info__text
+              'ユーザ名： 
+              = get_user_name(user.name)
+            p.list__profile__info__text
+              'ひとこと： よろしくお願いします！
+            p.list__profile__info__text 
+              '集合時間： 2016年01月01日(金) 00時00分
+    - else
+      li.default__list__item 確定した予定はありません
