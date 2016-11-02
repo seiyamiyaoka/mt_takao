@@ -4,7 +4,7 @@ lock '3.6.1'
 set :application, 'mt_takao'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/seiyamiyaoka/mt_takao.git'
+set :repo_url, 'git@github.com:seiyamiyaoka/mt_takao.git'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, ENV['BRANCH'] || 'master'
@@ -14,7 +14,7 @@ set :deploy_to, '/var/www/mt_takao'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
-set :linked_dirs, %w{log tmp/pids tmp/cache /var/lib/mysql/mysql.sock public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache /var/lib/mysql/ public/uploads}
 
 # 保持するバージョンの個数(※後述)
 set :keep_releases, 5
