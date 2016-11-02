@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
 
 development:
   <<: *default
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: mt_takeo_production
-  username: mt_takeo
+  database: mt_takao_production
+  username: mt_takao
   password: <%= ENV['MTTAKAO_DATABASE_PASSWORD'] %>
