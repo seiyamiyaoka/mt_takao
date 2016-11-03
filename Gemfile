@@ -24,6 +24,11 @@ gem 'dotenv-rails'
 gem 'unicorn'
 # verify
 gem 'devise'
+gem 'capistrano', '3.6.1'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv'
+gem 'capistrano-bundler'
+gem 'capistrano3-unicorn'
 
 # analy
 gem 'google-analytics-rails', '1.1.0'
@@ -62,12 +67,6 @@ group :development do
   # code check
   gem 'rubocop'
   gem 'rails_best_practices'
-
-  gem 'capistrano', '3.6.1'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano3-unicorn'
 end
 
 group :test do
