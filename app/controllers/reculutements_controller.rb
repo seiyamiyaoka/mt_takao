@@ -1,4 +1,5 @@
 class ReculutementsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @users = User.get_participations(current_user)
   end

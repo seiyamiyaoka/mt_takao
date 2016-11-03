@@ -1,5 +1,5 @@
 class PromisesController < ApplicationController
-
+  before_action :authenticate_user!
   def index
     @promises = Promise.where.not(user_id: current_user.id)
   end
@@ -15,7 +15,7 @@ class PromisesController < ApplicationController
   end
 
   private
-  
+
   def params_promise
     params.require(:promise).permit(:promise_time, :meet_time)
   end

@@ -1,4 +1,5 @@
 class ParticipantsController < ApplicationController
+  before_action :authenticate_user!
   def index
     if params[:name] == nil || params[:name] == "my"
       promises_id = Promise.where(user_id: current_user.id).pluck(:id)

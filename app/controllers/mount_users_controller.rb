@@ -1,4 +1,6 @@
 class MountUsersController < ApplicationController
+  before_action :authenticate_user!
+  before_action :correct_user!
   before_action :set_user, only: [:edit, :update]
   def new
     #code
@@ -19,5 +21,10 @@ class MountUsersController < ApplicationController
   end
   def user_params
     params.require(:user).permit(:name)
+  end
+
+  def correct_user!
+    @user = User.find(params[:id])
+    redirect_to mount_user_path(current_user.id) unless current_user.id == @user.id
   end
 end
