@@ -9,6 +9,8 @@ ja:
         password: パスワード
         password_confirmation: パスワード(確認用)
         remember_me: ログインを保持
+        image: プロフィール画像
+        one_thing: ひとこと
       promise:
         promise_time: 登山予定日
     errors:

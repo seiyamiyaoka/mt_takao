@@ -30,6 +30,10 @@ gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
 gem 'capistrano3-unicorn'
 
+# image
+gem 'carrierwave'
+gem 'rmagick'
+
 
 
 # analy

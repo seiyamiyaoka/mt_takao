@@ -7,7 +7,7 @@
           = image_tag get_image(current_user), class: 'mypage__my_prof__image'
         .mypage__my_info
           p.mypage__my_info__title ひとこと
-          p.mypage__my_info__msg 一日一膳
+          p.mypage__my_info__msg = get_one_thing(current_user)
           p.mypage__my_info__link = link_to "プロフィールを登録する", edit_mount_user_path(@user)
   .mypage__menu
     .mypage__menu__item
