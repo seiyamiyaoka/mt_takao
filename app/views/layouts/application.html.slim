@@ -4,7 +4,7 @@ html
     title MtTakao
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    = alalytics_init if Rails.env.production?
+    = analytics_init if Rails.env.production?
     = csrf_meta_tags
   body
     .l-wrapper
