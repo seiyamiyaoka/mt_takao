@@ -30,6 +30,8 @@ gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
 gem 'capistrano3-unicorn'
 
+
+
 # analy
 gem 'google-analytics-rails', '1.1.0'
 
