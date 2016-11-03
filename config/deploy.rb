@@ -14,7 +14,7 @@ set :deploy_to, '/var/www/mt_takao'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
-set :linked_dirs, %w{log tmp/pids tmp/cache /var/lib/mysql/ public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache public/uploads}
 
 # 保持するバージョンの個数(※後述)
 set :keep_releases, 5

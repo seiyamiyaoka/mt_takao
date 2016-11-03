@@ -5,7 +5,7 @@ gem 'rails', '4.2.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # db/model
-gem 'mysql2', '~> 0.3.21'
+gem 'pg'
 
 # front
 gem 'sass-rails', '~> 5.0'
