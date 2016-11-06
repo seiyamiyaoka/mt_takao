@@ -1,0 +1,147 @@
+@media screen and (max-width:480px) {
+  .l-container {
+    width: 95%;
+  }
+
+  .top__menu {
+    bottom: 70px;
+    width: 95%;
+  }
+
+  .verify {
+    @at-root {
+      &__menu {
+        width: 90%;
+      }
+
+      &__description {
+        display: none;
+      }
+
+      &__form {
+        width: 95%;
+      }
+    }
+  }
+
+  .heading {
+    @at-root {
+      &__content {
+        bottom: 70px;
+        width: 95%;
+      }
+    }
+  }
+
+  .mypage {
+    @at-root {
+      &__information {
+        width: 100%;
+        height: 180px;
+      }
+
+      &__my_prof {
+        width: 90px;
+      }
+
+      &__my_info {
+        width: calc(100% - 100px);
+
+        &__msg {
+          font-size: 14px;
+          a {
+            font-size: 14px
+          }
+        }
+      }
+
+      &__menu {
+        
+        &__item {
+          margin: 0 auto;
+          padding: 0 0 30px 0; 
+          width: 200px;
+          height: 200px;
+          float: none;
+        }
+      }
+
+      &__btn {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .default__list {
+    &__item {
+      width: 95%;
+      height: 150px;
+    }
+  }
+
+  .list {
+    @at-root {
+      &__profile {
+        width: 80px;
+
+        &__image {
+          bottom: 55px;
+        }
+
+        &__info {
+          width: calc(100% - 90px);
+          
+          &__text {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .promise {
+    @at-root {
+      &__button {
+        top: 125px;
+        right: 10px;
+      }
+    }
+  }
+  
+  .reculutement {
+    @at-root {
+      &__btn {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        width: 40%;
+      }
+
+      &__btn__area {
+        position: absolute;
+        width: calc(100% - 90px);
+        bottom: 10px;
+        right: 0;
+      }
+    }
+  }
+
+  .participant {
+    @at-root {
+      &__list__item {
+        height: 100px;
+      }
+
+      &__image {
+        bottom: 0;
+      }
+    }
+  }
+
+  .sd_only {
+    display: block;
+  }
+
+  .devise_btn {
+    width: 100%;
+  }
+}

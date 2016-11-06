@@ -23,7 +23,7 @@
         | 待ち合わせを
         br
         | 確認する
-    .mypage__menu__item
-      - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
+    - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
+      .mypage__menu__item
         = link_to reculutements_path, class: 'round__btn mypage__btn' do
           | 希望者を確認する

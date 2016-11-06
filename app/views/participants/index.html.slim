@@ -5,9 +5,9 @@
   ul.default__list
     - if @participations.present?
       - @participations.each do |user|
-        li.default__list__item
+        li.default__list__item.participant__list__item
           .list__profile
-            = image_tag get_image(user), class: 'list__profile__image'
+            = image_tag get_image(user), class: 'list__profile__image participant__image'
           .list__profile__info
             p.list__profile__info__text
               'ユーザ名： 
@@ -17,4 +17,4 @@
             p.list__profile__info__text 
               '集合時間： 2016年01月01日(金) 00時00分
     - else
-      li.default__list__item 確定した予定はありません
+      li.default__list__item.participant__list__item 確定した予定はありません
