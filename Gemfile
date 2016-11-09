@@ -22,6 +22,7 @@ gem "font-awesome-rails"
 gem 'config'
 gem 'dotenv-rails'
 gem 'unicorn'
+
 # verify
 gem 'devise'
 gem 'capistrano', '3.6.1'
@@ -30,7 +31,10 @@ gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
 gem 'capistrano3-unicorn'
 
-
+# image
+gem 'carrierwave'
+gem 'rmagick'
+gem 'fog'
 
 # analy
 gem 'google-analytics-rails', '1.1.0'

@@ -157,7 +157,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
   width: 75%;
   height: 30%;
@@ -207,12 +207,10 @@
   }
 
   &__info {
-  height: 100%;
   width: 65%;
   float:left;
 
     &__subject {
-      height: 20px;
       line-height: 20px;
       padding: 5px;
       font-size: 16px;

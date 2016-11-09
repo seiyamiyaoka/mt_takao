@@ -1,7 +1,13 @@
 .top
   .top__menu
-    h2.top__title そうだ。高尾山に登ろう。
-    p.top__msg このサイトは高尾山に登る人のためのサイトです。lets, takao life!
+    h2.top__title 
+      | そうだ。
+      br.sd_only
+      | 高尾山に登ろう
+    p.top__msg 
+      | このサイトは高尾山に登る人のためのサイトです。
+      br.sd_only
+      | lets, takao life!
     - if user_signed_in?
       = link_to '山に登る', new_promise_path, class: 'large_sign_up_btn'
     - else

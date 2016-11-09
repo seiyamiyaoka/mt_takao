@@ -1,0 +1,42 @@
+@media screen and (min-width:480px) and (max-width:1024px) {
+  .mypage {
+    @at-root {
+      &__information {
+        width: 100%;
+        height: 180px;
+      }
+
+      &__my_prof {
+        width: 90px;
+      }
+
+      &__menu {
+        width: 100%;
+        margin: 10px auto;
+      }
+
+      &__list {
+        &__item {
+          width: 20%;
+        }
+      }
+
+      &__my_info {
+        width: calc(100% - 100px);
+
+        &__msg {
+          font-size: 14px;
+          a {
+            font-size: 14px
+          }
+        }
+      }
+
+      &__btn {
+        width: 90px;
+        height: 70px;
+        font-size: 14px;
+      }
+    }
+  }
+}
