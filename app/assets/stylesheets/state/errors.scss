@@ -1,0 +1,10 @@
+.field_with_errors {
+  .form__text__box {
+    border: 1px solid red;
+  }
+}
+
+.error_message_label {
+  font-size: 12px;
+  color: red;
+}

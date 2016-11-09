@@ -4,16 +4,24 @@
       .verify__form__container
         h2.verify__title サインアップ
         = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-          = devise_error_messages!
           .verify__field
             = f.label :email, class: 'form__label'
             = f.email_field :email, autofocus: true, class: 'form__text__box'
+            - if f.object.errors[:email].present?
+              label.error_message_label for="email"
+                = f.object.errors.full_messages_for(:email).first
           .verify__field
             = f.label :password, class: 'form__label'
             = f.password_field :password, class: 'form__text__box', autocomplete: "off"
+            - if f.object.errors[:password].present?
+              label.error_message_label for="password"
+                = f.object.errors.full_messages_for(:password).first
           .verify__field
             = f.label :password_confirmation, class: 'form__label'
             = f.password_field :password_confirmation, class: 'form__text__box', autocomplete: "off"
+            - if f.object.errors[:password_confirmation].present?
+              label.error_message_label for="password_confirmation"
+                = f.object.errors.full_messages_for(:password_confirmation).first
           .verify__action
             = f.submit "登録する", class: 'devise_btn'
 

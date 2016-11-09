@@ -3,8 +3,9 @@
     .verify__form
       .verify__form__container
         h2.verify__title ログイン
+        - if alert
+          lable.error_message_label = alert
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          = devise_error_messages!
           .verify__field
             = f.label :email, class: 'form__label'
             = f.email_field :email, autofocus: true, class: 'form__text__box'
