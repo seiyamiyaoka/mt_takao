@@ -10,11 +10,12 @@
             = image_tag get_image(user), class: 'list__profile__image participant__image'
           .list__profile__info
             p.list__profile__info__text
-              'ユーザ名： 
+              'ユーザ名：
               = get_user_name(user.name)
             p.list__profile__info__text
               'ひとこと： よろしくお願いします！
-            p.list__profile__info__text 
+            p.list__profile__info__text
               '集合時間： 2016年01月01日(金) 00時00分
     - else
       li.default__list__item.participant__list__item 確定した予定はありません
+  = render 'shared/link'

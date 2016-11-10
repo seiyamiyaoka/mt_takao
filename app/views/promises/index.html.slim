@@ -12,3 +12,4 @@
           p.list__profile__info__text
             = l(promise.promise_time, format: :promise)
           = button_to '一緒に登りたい', reculutements_path, params: { user_id: promise.user.id, promise_id: promise.id }, class: 'form__btn promise__button'
+  = render 'shared/link'

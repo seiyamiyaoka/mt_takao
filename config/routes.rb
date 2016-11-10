@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :mount_users, only:[:show, :edit, :update]
 
   devise_for :users
+
+  get "top/create_user", to: "top#create_user"
   root 'top#index'
 end

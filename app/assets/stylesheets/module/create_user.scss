@@ -1,0 +1,21 @@
+.create_user {
+  &_main_container_info {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+  &_name {
+    line-height: 3;
+  }
+  &_main_image {
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+    img {
+      width: 50%;
+    }
+  }
+  &_profile {
+    list-style: none;
+  }
+}
