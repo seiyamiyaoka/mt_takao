@@ -7,6 +7,7 @@ class Reculutement < ActiveRecord::Base
     .select('users.id')
     .where('participation_id = ?', user)
   }
+  scope :applicant, -> { where.not(result: false) }
 
   def self.decide_mountain(params, id)
     # 参加希望者のid
