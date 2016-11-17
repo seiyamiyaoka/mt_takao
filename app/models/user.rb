@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   def self.get_participations(user)
     promises_id = Promise.where(user_id: user.id).pluck(:id)
-    reculutements_participation_id = Reculutement.where(promise_id: promises_id).pluck(:participation_id)
+    reculutements_participation_id = Reculutement.where(promise_id: promises_id).where.not(result: false).pluck(:participation_id)
     User.find(reculutements_participation_id)
   end
 end

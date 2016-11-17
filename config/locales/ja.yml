@@ -13,6 +13,7 @@ ja:
         one_thing: ひとこと
       promise:
         promise_time: 登山予定日
+        limit_time: 募集締め切り期間
     errors:
         messages:
           record_invalid: "バリデーションに失敗しました: %{errors}"
