@@ -10,8 +10,9 @@ class PromisesController < ApplicationController
 
   def create
     @promise = current_user.promises.build(params_promise)
+    
     if @promise.save
-      redirect_to mount_user_path(current_user), notice: "登山日を登録しました！"
+      redirect_to user_path, notice: "登山日を登録しました！"
     else
       render :new
     end

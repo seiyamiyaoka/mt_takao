@@ -24,6 +24,10 @@
                 = f.object.errors.full_messages_for(:password_confirmation).first
           .verify__action
             = f.submit "登録する", class: 'devise_btn'
+          .verify__field
+            - if devise_mapping.omniauthable?
+                - resource_class.omniauth_providers.each do |provider|
+                  = link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider)
 
     .verify__description
       h2.verify__title 高尾山とは

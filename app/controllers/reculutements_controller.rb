@@ -13,7 +13,7 @@ class ReculutementsController < ApplicationController
                     participation_id: current_user.id,
                     promise_id: params[:promise_id])
     @reculutement.save
-    redirect_to mount_user_path(current_user), notice: "一緒に行けるといいですね"
+    redirect_to user_path, notice: "一緒に行けるといいですね"
   end
 
   def edit
@@ -22,6 +22,6 @@ class ReculutementsController < ApplicationController
 
   def update
     Reculutement.decide_mountain(params, current_user.id)
-    redirect_to mount_user_path(current_user)
+    redirect_to user_path
   end
 end

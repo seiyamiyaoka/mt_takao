@@ -106,6 +106,39 @@
   }
 }
 
+.fb_btn {
+  background-color: #3b5998;
+  height: 50px;
+  width: 80%;
+  margin: 30px auto;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 4px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    background-image: image-url('icons/FB-f-Logo__blue_58.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+
+  @at-root {
+    &__label {
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 20px 0 50px;
+    }
+  }
+}
+
 .form__label {
   display: block;
   font-size: 14px;
