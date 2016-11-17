@@ -1,7 +1,5 @@
 class TopController < ApplicationController
   def index
-  end
-  def create_user
-    #code
+    @user = User.new
   end
 end

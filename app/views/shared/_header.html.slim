@@ -7,14 +7,11 @@ header.l-header
       li.header__nav__item = link_to 'マイページ', user_path
       li.header__nav__item = link_to '待ち合わせ'
     - else
-      li.header__nav__item = link_to 'ログイン', new_user_session_path
       li.header__nav__item = link_to "作った人", top_create_user_path
-
-  #ham__menu__btn.header__ham__btn ≡
-  ul.header__ham__menu
-    - if user_signed_in?
+      
+  - if user_signed_in?
+    #ham__menu__btn.header__ham__btn ≡
+    ul.header__ham__menu
       li.header__ham__item = link_to 'マイページ', user_path
       li.header__ham__item = link_to '待ち合わせ'
       li.header__ham__item = link_to 'ログアウト', destroy_user_session_path, method: :delete
-    - else
-      li.header__ham__item = link_to 'ログイン', new_user_session_path
