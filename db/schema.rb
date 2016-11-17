@@ -26,11 +26,12 @@ ActiveRecord::Schema.define(version: 20161103141550) do
   add_index "promises", ["user_id"], name: "index_promises_on_user_id", using: :btree
 
   create_table "reculutements", force: :cascade do |t|
-    t.integer  "participation_id"
+    t.integer  "user_id"
     t.integer  "promise_id"
+    t.string   "content"
     t.boolean  "result"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

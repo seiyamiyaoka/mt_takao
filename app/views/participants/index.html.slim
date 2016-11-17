@@ -1,17 +1,17 @@
 .l-container
   .participant__select__area
     = link_to "主催一覧", { name: "my" }, class: 'form__btn participant__btn'
-    = link_to "参加一覧", { name: "your" }, class: 'form__btn participant__btn'
+    = link_to "参加一覧(予定も含むよ！)", { name: "your" }, class: 'form__btn participant__btn'
   ul.default__list
     - if @participations.present?
-      - @participations.each do |user|
+      - @participations.each do |participation|
         li.default__list__item.participant__list__item
-          .list__profile
-            = image_tag get_image(user), class: 'list__profile__image participant__image'
-          .list__profile__info
             p.list__profile__info__text
-              'ユーザ名：
-              = get_user_name(user.name)
+              'イベント名：
+              = participation.promise.title
+            p.list__profile__info__text
+              'イベント内容：
+              = participation.promise.content
             p.list__profile__info__text
               'ひとこと： よろしくお願いします！
             p.list__profile__info__text
