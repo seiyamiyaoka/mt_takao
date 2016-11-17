@@ -25,6 +25,10 @@ gem 'unicorn'
 
 # verify
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
+# deploy
 gem 'capistrano', '3.6.1'
 gem 'capistrano-rails'
 gem 'capistrano-rbenv'
