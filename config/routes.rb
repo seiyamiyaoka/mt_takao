@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :reculutements, only:[:index, :create, :edit, :update]
   resources :participants, only:[:index]
   resources :promises, only:[:new, :create, :index]
-  resources :mount_users, only:[:show, :edit, :update]
+  resource  :user, only:[:new, :show, :edit, :update]
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks'

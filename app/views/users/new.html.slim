@@ -2,19 +2,23 @@
   .verify__menu
     .verify__form
       .verify__form__container
-        h2.verify__title ユーザ情報編集
-        = form_for @user, url: mount_user_path(@user)  do |f|
+        h2.verify__title ユーザ情報を登録しよう！
+        = form_for @user, url: user_path do |f|
           .verify__field
             = f.label :name, class: 'form__label'
             = f.text_field :name, class: 'form__text__box'
+          .verify__field
+            = f.label :birthday, class: 'form__label'
+            .promise__select__area
+              = f.date_select :birthday, include_blank: true, class: 'form-control'
           .verify__field
             = f.label :image, class: 'form__label'
             = image_tag @user.image if @user.image?
             = f.file_field :image, class: 'form__text__box'
             = f.hidden_field :image_cache
           .verify__field
-            = f.label :one_thing, class: 'form__label'
-            = f.text_field :one_thing, class: 'form__text__box'
+            = f.label :self_introduction, class: 'form__label'
+            = f.text_field :self_introduction, class: 'form__text__box'
           .verify__action
             = f.submit "編集する", class: 'devise_btn'
 

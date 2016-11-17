@@ -15,11 +15,11 @@ module UserHelper
     end
   end
 
-  def get_one_thing(user)
-    if user.one_thing.blank?
-      link_to 'なにかひとことを入れてみよう', edit_mount_user_path(user)
+  def get_self_introduction(user)
+    if user.self_introduction.blank?
+      link_to 'なにかひとことを入れてみよう', edit_user_path
     else
-      user.one_thing
+      user.self_introduction
     end
   end
 end
