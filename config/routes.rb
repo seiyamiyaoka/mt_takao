@@ -8,4 +8,8 @@ Rails.application.routes.draw do
 
   get "top/create_user", to: "top#create_user"
   root 'top#index'
+
+  scope :user do
+    resources :tasks
+  end
 end

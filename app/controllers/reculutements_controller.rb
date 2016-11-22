@@ -11,7 +11,6 @@ class ReculutementsController < ApplicationController
   def create
     @reculutement = current_user.reculutements.build(
                     promise_id: params[:promise_id],)
-                    binding.pry
     @reculutement.save
     redirect_to mount_user_path(current_user), notice: "一緒に行けるといいですね"
   end

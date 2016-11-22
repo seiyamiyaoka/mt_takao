@@ -1,5 +1,6 @@
 header.l-header
   h1.header__logo= link_to "Mt.takao", root_path
+  = notice
   ul.header__nav
     - if user_signed_in?
       li.header__nav__item = link_to 'ログアウト', destroy_user_session_path, method: :delete
