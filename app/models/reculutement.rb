@@ -1,12 +1,13 @@
 class Reculutement < ActiveRecord::Base
   belongs_to :promise
-  belongs_to :participation, class_name: User
+  belongs_to :user
 
   scope :participations_all, ->(user) {
     joins(promise: :user)
     .select('users.id')
     .where('participation_id = ?', user)
   }
+  scope :applicant, -> { where.not(result: false) }
 
   def self.decide_mountain(params, id)
     # 参加希望者のid

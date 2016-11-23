@@ -10,9 +10,11 @@ ja:
         password_confirmation: パスワード(確認用)
         remember_me: ログインを保持
         image: プロフィール画像
-        one_thing: ひとこと
+        self_introduction: 自己紹介
+        birthday: 生年月日
       promise:
         promise_time: 登山予定日
+        limit_time: 募集締め切り期間
     errors:
         messages:
           record_invalid: "バリデーションに失敗しました: %{errors}"

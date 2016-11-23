@@ -22,6 +22,9 @@
           .verify__field
             = link_to '新規会員登録', new_user_registration_path, class: 'verify__link'
             = link_to 'パスワードをお忘れの方', new_user_password_path, class: 'verify__link'
+            - if devise_mapping.omniauthable?
+              - resource_class.omniauth_providers.each do |provider|
+                = link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider)
 
     .verify__description
       h2.verify__title 高尾山とは

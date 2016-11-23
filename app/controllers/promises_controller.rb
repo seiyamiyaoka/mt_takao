@@ -10,13 +10,17 @@ class PromisesController < ApplicationController
 
   def create
     @promise = current_user.promises.build(params_promise)
-    @promise.save
-    redirect_to mount_user_path(current_user)
+    
+    if @promise.save
+      redirect_to user_path, notice: "登山日を登録しました！"
+    else
+      render :new
+    end
   end
 
   private
 
   def params_promise
-    params.require(:promise).permit(:promise_time, :meet_time)
+    params.require(:promise).permit(:promise_time, :meet_time, :title, :content, :limit_time)
   end
 end

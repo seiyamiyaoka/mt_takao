@@ -1,0 +1,26 @@
+.verify
+  .verify__menu
+    .verify__form
+      .verify__form__container
+        h2.verify__title ユーザ情報編集
+        = form_for @user, url: user_path do |f|
+          .verify__field
+            = f.label :name, class: 'form__label'
+            = f.text_field :name, class: 'form__text__box'
+          .verify__field
+            = f.label :image, class: 'form__label'
+            = image_tag @user.image if @user.image?
+            = f.file_field :image, class: 'form__text__box'
+            = f.hidden_field :image_cache
+          .verify__field
+            = f.label :self_introduction, class: 'form__label'
+            = f.text_field :self_introduction, class: 'form__text__box'
+          .verify__action
+            = f.submit "編集する", class: 'devise_btn'
+
+    .verify__description
+      h2.verify__title 高尾山とは
+      p.verify__takao__msg 
+        | 高尾山は、東京都八王子市にある標高599mの山である。東京都心から近く、年間を通して多くの観光客や登山者が訪れる。古くから修験道の霊山とされた。
+        br  
+        | (出典：ウィキペディア)
