@@ -3,14 +3,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :promises
-  has_many :participations, class_name: User, foreign_key: 'participation_id'
+  has_many :reculutements
 
   mount_uploader :image, ProfileImageUploader
 
   def self.get_participations(user)
     promises_id = Promise.where(user_id: user.id).pluck(:id)
-    reculutements_participation_id = Reculutement.where(promise_id: promises_id).where.not(result: false).pluck(:participation_id)
-    User.find(reculutements_participation_id)
+    reculutements_user_id = Reculutement.where(promise_id: promises_id).pluck(:user_id)
+    User.find(reculutements_user_id)
   end
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)

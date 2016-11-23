@@ -9,9 +9,8 @@ class ReculutementsController < ApplicationController
   end
 
   def create
-    @reculutement = Reculutement.new(
-                    participation_id: current_user.id,
-                    promise_id: params[:promise_id])
+    @reculutement = current_user.reculutements.build(
+                    promise_id: params[:promise_id],)
     @reculutement.save
     redirect_to user_path, notice: "一緒に行けるといいですね"
   end
