@@ -1,3 +1,4 @@
+require 'capistrano/rails/db'
 lock '3.6.1'
 
 # デプロイするアプリケーション名

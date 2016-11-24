@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.find_by(email: auth.info.email)
-    
+
     unless user
       user = User.new(
           provider:  auth.provider,
@@ -29,5 +29,13 @@ class User < ActiveRecord::Base
       user.save(validate: false)
     end
     user
+  end
+
+  def already_joined_promise(promise)
+    reculutements.where(promise_id: promise.id)
+  end
+
+  def joined?(promise)
+    already_joined_promise(promise).present?
   end
 end
