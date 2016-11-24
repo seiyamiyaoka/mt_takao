@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+user = User.new(
+      name: "testUser",
+      email: "test1@example.com",
+      password: "password",
+)
+user.save
+user.promises.build do |promise|
+  promise.user_id = user.id,
+  promise.promise_time = Time.now,
+  promise.limit_time = Time.now + 1,
+  promise.content = "高尾山に登ろう",
+  promise.title = "test",
+  promise.save
+end
