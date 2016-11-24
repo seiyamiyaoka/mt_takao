@@ -7,7 +7,7 @@ class Promise < ActiveRecord::Base
 
   def before_limit_time
     if limit_time > promise_time
-      errors.add(:limit_time, "締め切り日は開始日より後に設定していください")
+      errors.add(:ride_mount, "締切日より前に設定してください")
     end
   end
 

@@ -1,11 +1,11 @@
-- if @promise.errors.any?
-  div
-    - @promise.errors.full_messages.each do |m|
-      p = m
 .promise
   .heading__wrapper
     .heading__content
-      h2.heading__title 山のぼる日にちを決めよう
+      h2.heading__title 山にのぼる日にちを決めよう
+      - if @promise.errors.any?
+        div
+          - @promise.errors.full_messages.each do |m|
+            p.promise__error__message = m
   = form_for @promise do |f|
     .promise__field
       p = f.label :title
