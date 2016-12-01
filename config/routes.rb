@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
-  get "top/create_user", to: "top#create_user"
+  get "top/create_user"
+  get "top/contract"
+  get "top/privacy_porycy"
   root 'top#index'
 
   scope :user do
