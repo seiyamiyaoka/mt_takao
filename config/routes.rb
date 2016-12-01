@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get "top/create_user"
   get "top/contract"
-  get "top/privacy_porycy"
+  get "top/privacy_policy"
   root 'top#index'
 
   scope :user do

@@ -1,3 +1,45 @@
 .main-visual {
   background: image-url('landing/stride.JPG');
 }
+
+.fb_btn {
+  color: #fff;
+  background-color: #3b5998;
+  height: 50px;
+  width: 80%;
+  max-width: 400px;
+  min-width: 300px;
+  margin: 30px auto;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 24px;
+  line-height: 50px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    background-image: image-url('icons/FB-f-Logo__blue_58.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  @at-root {
+    &__label {
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 20px 0 50px;
+    }
+  }
+}
