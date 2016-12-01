@@ -1,0 +1,10 @@
+@mixin clearfix {
+  clear: both;
+  content: " ";
+  display:block;
+}
+
+@mixin pane-box {
+  background: #fff;
+  padding: 20px 10px;
+}
