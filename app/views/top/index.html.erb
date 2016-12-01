@@ -1,22 +1,23 @@
+<%= render partial: 'shared/landing/header' %>
+
 <div class="fh5co-hero">
   <div class="fh5co-overlay"></div>
   <div class="fh5co-cover text-center main-visual" data-stellar-background-ratio="0.5">
     <div class="desc">
       <div class="container">
-        <div class="col-md-10 col-md-offset-1">
-          <a href="index.html" id="main-logo">Module</a>
+        <div class="col-md-12">
           <div class="animate-box">
-            <h2>The best view comes after the hardest climb.</h2>
-            <p>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></p>
-            <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p>
+            <h2>あの日登った高尾はここにある</h2>
+            <%= link_to omniauth_authorize_path(@user, 'facebook'), class: 'fb_btn' do %>
+              facebookではじめる
+            <% end %> 
+            <!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<%= render partial: 'shared/landing/header' %>
 
 <div id="fh5co-feature-product" class="fh5co-section-gray">
   <div class="container">
