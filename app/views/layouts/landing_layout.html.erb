@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mt.Takao</title>
+    <%= stylesheet_link_tag 'landing/application', media: 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="fh5co-wrapper">
+      <div id="fh5co-page">
+      
+        <%= yield %>
+
+      </div>
+    </div>  
+    <%= javascript_include_tag 'landing/application' %>
+  </body>
+</html>

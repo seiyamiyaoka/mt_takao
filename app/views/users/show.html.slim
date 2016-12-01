@@ -1,29 +1,23 @@
-.mypage
-  .heading__wrapper
-    .heading__content
-      .mypage__information
-        h2.mypage__title #{@user.name} さんのマイページ
-        .mypage__my_prof
-          = image_tag get_image(current_user), class: 'mypage__my_prof__image'
-        .mypage__my_info
-          p.mypage__my_info__title ひとこと
-          p.mypage__my_info__msg = get_self_introduction(current_user)
-          p.mypage__my_info__link = link_to "プロフィールを登録する", edit_user_path
-  .mypage__menu
-    .mypage__menu__item
-      = link_to new_promise_path, class: 'round__btn mypage__btn' do
-        | 待ち合わせ日を
-        br
-        | 作成する
-    .mypage__menu__item
-      = link_to promises_path, class: 'round__btn mypage__btn' do
-        | Let's mt_takao!
-    .mypage__menu__item
-      = link_to participants_path, class: 'round__btn mypage__btn' do
-        | 待ち合わせを
-        br
-        | 確認する
-    - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
-      .mypage__menu__item
-        = link_to reculutements_path, class: 'round__btn mypage__btn' do
-          | 希望者を確認する
+.l-container
+  .mypage
+    .mypage__prof
+      .mypage__prof__info
+        h3.heading-lg プロフィール
+        ul.mypage__prof__info__list
+          li.mypage__prof__info__list__item
+            h4.heading-sm 性別
+            p.mypage__prof__info__answer = @user.gender
+          li.mypage__prof__info__list__item
+            h4.heading-sm 生年月日
+            p.mypage__prof__info__answer = @user.birthday
+          li.mypage__prof__info__list__item
+            h4.heading-sm 自己紹介
+            p.mypage__prof__info__answer = get_self_introduction(@user)
+      .mypage__prof__avatar
+        = image_tag get_image(@user), class: 'mypage__prof__avatar__image'
+        p.mypage__prof__avatar__name = @user.name + "(22)"
+
+    .mypage__promise
+    
+  
+  
