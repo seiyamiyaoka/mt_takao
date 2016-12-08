@@ -58,7 +58,7 @@
 
 .field {
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .image-sm {
@@ -76,4 +76,9 @@
 
 .move-right {
   float: right;
+}
+
+.date-form {
+  display: inline-block;
+  width: auto;
 }
