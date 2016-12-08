@@ -78,6 +78,7 @@ group :development do
   # code check
   gem 'rubocop'
   gem 'rails_best_practices'
+  gem 'xray-rails'
 end
 
 group :test do
