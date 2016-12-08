@@ -8,6 +8,7 @@
         <ul class="sf-menu" id="fh5co-primary-menu">
           <li class="active"><a href="index.html">Home</a></li>
           <li>
+            <% if user_signed_in? %>
             <a href="#" class="fh5co-sub-ddown">Dropdown</a>
             <ul class="fh5co-sub-menu">
               <li><a href="#">Web Design</a></li>
@@ -17,9 +18,8 @@
               <li><a href="#">Django &amp; Python</a></li>
             </ul>
           </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+          <% end %>
         </ul>
       </nav>
     </div>
