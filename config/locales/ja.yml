@@ -18,6 +18,7 @@ ja:
         promise_time: 登山予定日
         limit_time: 募集締め切り期間
         ride_mount: 登山予定日は
+        image: イメージ画像
     errors:
         messages:
           record_invalid: "バリデーションに失敗しました: %{errors}"

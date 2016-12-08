@@ -8,6 +8,10 @@ class PromisesController < ApplicationController
     @promise = Promise.new
   end
 
+  def show
+    @promise = Promise.find(params[:id])
+  end
+
   def create
     @promise = current_user.promises.build(params_promise)
 

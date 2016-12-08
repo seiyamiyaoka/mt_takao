@@ -58,7 +58,7 @@
 
 .field {
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .image-sm {
@@ -76,4 +76,33 @@
 
 .move-right {
   float: right;
+}
+
+.date-form {
+  display: inline-block;
+  width: auto;
+}
+
+.error {
+  @at-root {
+    &-panel {
+      background-color: #ffdcdc !important;
+      border: 2px solid #f93535 !important;
+      padding: 20px 10px 0 20px;
+    }
+
+    &-title {
+      color: #f93535;
+      font-size: 16px;
+    }
+    &-text {
+      color: #f93535;
+      font-size: 14px;
+    }
+  }
+}
+
+textarea.lg {
+  height: 250px !important;
+  height: 250px !important;
 }
