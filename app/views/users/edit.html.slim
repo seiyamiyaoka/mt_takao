@@ -5,6 +5,12 @@
         .panel-heading プロフィール編集
         .panel-body
           = form_for @user, url: user_path do |f|
+            - if @user.errors.any?
+              .panel.panel-danger.error-panel
+                p.error-title = "#{@user.errors.count}つのエラーがあります"
+                ul
+                  - @user.errors.full_messages.each do |message|
+                    li.error-text = message
             .field
               = f.label :name
               = f.text_field :name, class: 'form-control'
@@ -18,6 +24,6 @@
               = f.date_field :birthday, class: 'form-control' 
             .field
               = f.label :self_introduction
-              = f.text_area :self_introduction, class: 'form-control'
+              = f.text_area :self_introduction, class: 'form-control lg'
             .field
               = f.submit "編集する", class: 'btn btn-success'

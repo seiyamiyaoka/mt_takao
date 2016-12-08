@@ -5,15 +5,21 @@
         .panel-heading 山に登る日にちを決めよう
         .panel-body
           = form_for @promise do |f|
+            - if @promise.errors.any?
+              .panel.panel-danger.error-panel
+                p.error-title = "#{@promise.errors.count}つのエラーがあります"
+                ul
+                  - @promise.errors.full_messages.each do |message|
+                    li.error-text = message
             .field
               = f.label :title
               = f.text_field :title, class: 'form-control'
             .field
               = f.label :promise_time
-              = f.datetime_field :promise_time, class: 'form-control'
+              = f.date_field :promise_time, class: 'form-control'
             .field
               = f.label :limit_time
-              = f.datetime_field :limit_time, class: 'form-control'
+              = f.date_field :limit_time, class: 'form-control'
             .field
               = f.label :image
               = image_tag @promise.image if @promise.image?
@@ -21,7 +27,7 @@
               = f.hidden_field :image_cache
             .field
               = f.label :content
-              = f.text_area :content, class: 'form-control'
+              = f.text_area :content, class: 'form-control lg'
             .field
               = link_to 'ホームへ戻る', user_path, class: 'btn btn-default'
               = f.submit "編集する", class: 'btn btn-success mgl-10'
