@@ -1,0 +1,29 @@
+.l-container
+  .row
+    .col-md-3
+      .panel.panel-default.profile-area
+        = image_tag get_image(@promise.user), class: 'profile-image'
+        p.profile-name
+          = @promise.user.name + " (#{calc_age(@promise.user.birthday)})"
+        .field
+          = simple_format get_self_introduction(@promise.user)
+      = link_to 'マイページに戻る', user_path, class: 'btn btn-default'
+    .col-md-9
+      h2 = @promise.title
+      .field
+        = image_tag get_promise_image(@promise.image), class: 'img-responsive promise-image'
+      hr
+      .field
+        table.table
+          thead
+            tr
+              th 登山日
+              th 募集締切
+          tbody
+            tr
+              td = l(@promise.promise_time, format: :promise)
+              td = l(@promise.limit_time, format: :promise)
+      hr
+      .field
+        label 募集詳細
+        = simple_format @promise.content
