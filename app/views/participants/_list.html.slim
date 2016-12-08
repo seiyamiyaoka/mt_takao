@@ -1,0 +1,9 @@
+ul.media-list
+  - promises.each do |promise|
+    li.media.list-item
+      a.media-left
+        = image_tag promise.image, class: 'image-sm'
+      .media-body
+        h4.media-heading = promise.title
+        p.list-text = "登山日: #{l(promise.promise_time, format: :promise)}"
+        p.list-text = "募集締切: #{l(promise.limit_time, format: :promise)}"

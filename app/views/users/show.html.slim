@@ -1,29 +1,50 @@
-.mypage
-  .heading__wrapper
-    .heading__content
-      .mypage__information
-        h2.mypage__title #{@user.name} さんのマイページ
-        .mypage__my_prof
-          = image_tag get_image(current_user), class: 'mypage__my_prof__image'
-        .mypage__my_info
-          p.mypage__my_info__title ひとこと
-          p.mypage__my_info__msg = get_self_introduction(current_user)
-          p.mypage__my_info__link = link_to "プロフィールを登録する", edit_user_path
-  .mypage__menu
-    .mypage__menu__item
-      = link_to new_promise_path, class: 'round__btn mypage__btn' do
-        | 待ち合わせ日を
-        br
-        | 作成する
-    .mypage__menu__item
-      = link_to promises_path, class: 'round__btn mypage__btn' do
-        | Let's mt_takao!
-    .mypage__menu__item
-      = link_to participants_path, class: 'round__btn mypage__btn' do
-        | 待ち合わせを
-        br
-        | 確認する
-    - if current_user.promises.present? && current_user.promises.map(&:reculutement).present?
-      .mypage__menu__item
-        = link_to reculutements_path, class: 'round__btn mypage__btn' do
-          | 希望者を確認する
+.l-container
+  .row
+    .col-md-3
+      .panel.panel-default.profile-area
+        = image_tag get_image(@user), class: 'profile-image'
+        p.profile-name
+          = @user.name + " (#{calc_age(@user.birthday)})"
+        .field
+          = simple_format get_self_introduction(@user)
+        .field
+          ul.menu-list
+            = link_to edit_user_path(@user) do
+              li.menu-list-item
+                span.glyphicon.glyphicon-user
+                'プロフィール編集 
+            = link_to new_promise_path do
+              li.menu-list-item
+                span.glyphicon.glyphicon-picture
+                '待ち合わせ募集
+            = link_to promises_path do
+              li.menu-list-item
+                span.glyphicon.glyphicon-exclamation-sign
+                '待ち合わせ確認
+    .col-md-9
+      .panel.panel-default
+        .panel-heading 待ち合わせ
+        .panel-body
+          ul.media-list
+            - @promises.each do |promise|
+              li.media.list-item
+                a.media-left
+                  = image_tag promise.image, class: 'image-sm'
+                .media-body
+                  h4.media-heading = promise.title
+                  p.list-text = "登山日: #{l(promise.promise_time, format: :promise)}"
+                  p.list-text = "募集締切: #{l(promise.limit_time, format: :promise)}"
+          = link_to 'すべての待ち合わせをみる', promises_path
+      .panel.panel-default
+        .panel-heading
+          span 応募
+          div.move-right
+            = link_to "主催", participants_path, { name: "my", remote: true, class: 'btn btn-sm btn-primary' }
+            = link_to "参加", participants_path, { name: "your", remote: true, class: 'btn btn-sm btn-warning mgl-10' }
+        .panel-body#participants_list
+          = render partial: 'participants/list', locals: { promises: @promises }
+
+
+    
+  
+  

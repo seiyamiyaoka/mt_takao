@@ -1,9 +1,25 @@
+#promise_title {
+  width: 100%;
+}
+#promise_content {
+  width: 100%;
+  height: 200px;
+}
+.promise__error__message {
+  color: yellow;
+}
 .promise {
   height: 100%;
+  p {
+    padding: 5px;
+  }
 
   @at-root {
     &__select__area {
       margin: 20px auto;
+      &__field {
+        padding: 10px;
+      }
     }
 
     &__select {
@@ -17,7 +33,8 @@
 
     &__field {
       width: 80%;
-      margin: 30px auto 0 auto;
+      padding-bottom: 80px;
+      margin: 30px auto auto auto;
     }
 
     &__title {

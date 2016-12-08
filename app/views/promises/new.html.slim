@@ -1,11 +1,11 @@
-- if @promise.errors.any?
-  div
-    - @promise.errors.full_messages.each do |m|
-      = m
 .promise
   .heading__wrapper
     .heading__content
-      h2.heading__title 山のぼる日にちを決めよう
+      h2.heading__title 山にのぼる日にちを決めよう
+      - if @promise.errors.any?
+        div
+          - @promise.errors.full_messages.each do |m|
+            p.promise__error__message = m
   = form_for @promise do |f|
     .promise__field
       p = f.label :title
@@ -13,19 +13,19 @@
       p = f.label :content
       p = f.text_area :content
       .promise__select__area
-        div
+        = f.label :promise_time
+        .promise__select__area__field
           = f.datetime_select :promise_time, { use_month_numbers: true,
                   start_year:     Time.now.year,
                   end_year:       (Time.now.year + 18),
                   default:        Date.today,
                   date_separator: '/' }, { class: 'form__select promise__select' }
         = f.label :limit_time
-        div
+        .promise__select__area__field
           = f.datetime_select :limit_time, { use_month_numbers: true,
                   start_year:     Time.now.year,
                   end_year:       (Time.now.year + 18),
                   default:        Date.today,
                   date_separator: '/'}, { class: 'form__select promise__select' }
       p = f.submit "この日程で山に登る", class: 'form__btn'
-      = f.label :promise_time
   = render 'shared/link'

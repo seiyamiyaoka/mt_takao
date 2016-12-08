@@ -34,6 +34,7 @@ gem 'capistrano-rails'
 gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
 gem 'capistrano3-unicorn'
+gem 'capistrano-rails-db'
 
 # image
 gem 'carrierwave'
@@ -77,6 +78,7 @@ group :development do
   # code check
   gem 'rubocop'
   gem 'rails_best_practices'
+  gem 'xray-rails'
 end
 
 group :test do

@@ -1,0 +1,58 @@
+.profile {
+  @at-root {
+    &-area {
+      padding: 20px 10px;
+    }
+
+    &-image {
+      display: block;
+      height: 100px;
+      width: 100px;
+      margin: 10px auto;
+    }
+
+    &-name {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &-edit-btn {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.menu-list {
+  padding: 0;
+  width: 100%;
+
+  @at-root {
+    &-item {
+      color: #37a000;
+      list-style-type: none;
+      font-size: 14px;
+      padding: 0 0 5px 0;
+      
+      span:after {
+        content: '　';
+      }
+    }
+  }
+}
+
+.list-text {
+  margin: 0;
+  font-size: 13px;
+}
+
+.list-item {
+  border-bottom: 1px solid #eee;
+  padding: 0 0 15px 0;
+  
+  @at-root {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

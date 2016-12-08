@@ -1,0 +1,178 @@
+<%= render partial: 'shared/landing/header' %>
+
+<div class="fh5co-hero">
+  <div class="fh5co-overlay"></div>
+  <div class="fh5co-cover text-center main-visual" data-stellar-background-ratio="0.5">
+    <div class="desc">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="animate-box">
+            <h2>あの日登った高尾はここにある</h2>
+            <%= link_to omniauth_authorize_path(@user, 'facebook'), class: 'fb_btn' do %>
+              facebookではじめる
+            <% end %>
+            <!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="fh5co-feature-product" class="fh5co-section-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+        <h3>山に登りたい山ぼっちに捧ぐ..</h3>
+        <p>ヘイ！そこの君！山に登りたくてそわそわしているだろ？そんな君たちを僕らは山ぼっちと呼んでいるんだ。山でいろんな出会いが待っている。そう、あの山が君を待っている</p>
+      </div>
+    </div>
+
+    <div class="row row-bottom-padded-md">
+      <div class="col-md-12 text-center animate-box">
+        <p> <%= image_tag "landing/momiji.JPG", class: "img-responsive img-rounded img-responsive img-rounded" %></p>
+      </div>
+
+    </div>
+    <div class="row row-bottom-padded-md">
+      <div class="col-md-4">
+        <div class="feature-text">
+          <h3>手始めに高尾山に登る</h3>
+          <p>都心からアクセスもよく登りやすい山です</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-text">
+          <h3>登山者に挨拶をする</h3>
+          <p>道行く人はみんな仲間です。先人たちに挨拶をしましょう</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-text">
+          <h3>温泉で疲れを取る</h3>
+          <p>今日はみんなくたくただろ？駅の横にある温泉で疲れを取るといいよ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <a href="https://www.youtube.com/watch?v=Kig9opGTxKE" class="link-watch popup-vimeo btn btn-primary"><i class="icon-play3"></i> Watch our video</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="fh5co-portfolio" class="fh5co-section-gray">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+        <h3>Our Gallery</h3>
+        <p>見てみろよ、お前ら。こんなにもすごい景色が見えるんだぜ。まだもたもたしているお前らに少し山の風景を見せてやるぜ。</p>
+      </div>
+    </div>
+
+
+    <div class="row row-bottom-padded-md">
+      <div class="col-md-12">
+        <ul id="fh5co-portfolio-list">
+
+          <li class="two-third animate-box session_kindan">
+            <a href="#" class="color-3">
+              <div class="case-studies-summary">
+                <span>sessionkinndan</span>
+                <h2>殺生禁断</h2>
+              </div>
+            </a>
+          </li>
+
+          <li class="one-third animate-box start_line">
+            <a href="#" class="color-4">
+              <div class="case-studies-summary">
+                <span>Beginning town</span>
+                <h2>始まりの街</h2>
+              </div>
+            </a>
+          </li>
+
+          <li class="one-third animate-box yamamiti">
+            <a href="#" class="color-5">
+              <div class="case-studies-summary">
+                <span>Mountain path</span>
+                <h2>山道</h2>
+              </div>
+            </a>
+          </li>
+          <li class="two-third animate-box onsenn">
+            <a href="#" class="color-6">
+              <div class="case-studies-summary">
+                <span>Hot spring</span>
+                <h2>温泉</h2>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fh5co-content-section">
+  <div class="container">
+    <div class="row row-bottom-padded-md">
+      <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+        <h3>Our Team</h3>
+        <p>エンジニアチーム</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="fh5co-team text-center animate-box">
+          <figure>
+            <img src="images/seiya.JPG" alt="user">
+          </figure>
+          <p>seiya miyaoka<br> <span class="text-mute">Developer</span></p>
+          <blockquote>
+            <p>hahaha ilove TKO</p>
+          </blockquote>
+
+
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="fh5co-team text-center animate-box">
+          <figure>
+            <img src="images/kmura.jpeg" alt="user">
+          </figure>
+          <p>kmura<br> <span class="text-mute">Developer</span></p>
+          <blockquote>
+            <p>touhoku Developer</p>
+          </blockquote>
+
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="fh5co-team text-center animate-box">
+          <figure>
+            <img src="images/kitamura.jpg" alt="user">
+          </figure>
+          <p>kitamura<br> <span class="text-mute">Photographer</span></p>
+          <blockquote>
+            <p>im enginner & desinger & photographer</p>
+          </blockquote>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- fh5co-content-section -->
+  </div>
+</div>
+
+<%= render partial: 'shared/landing/footer' %>

@@ -1,0 +1,79 @@
+.session_kindan {
+   background-image: image-url('landing/session.jpg');
+}
+.start_line {
+   background-image: image-url('landing/startline.JPG');
+}
+.onsenn {
+   background-image: image-url('landing/onsen.JPG');
+}
+.main-visual {
+  background: image-url('landing/stride.JPG');
+}
+.yamamiti {
+  background: image-url('landing/yamamiti2.JPG');
+}
+
+.fb_btn {
+  color: #fff;
+  background-color: #3b5998;
+  height: 50px;
+  width: 80%;
+  max-width: 400px;
+  min-width: 300px;
+  margin: 30px auto;
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 24px;
+  line-height: 50px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    background-image: image-url('icons/FB-f-Logo__blue_58.png');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  @at-root {
+    &__label {
+      color: #ffffff;
+      position: relative;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 20px 0 50px;
+    }
+  }
+}
+
+.field {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.image-sm {
+  width: 50px;
+  height: 50px;
+}
+
+.mg {
+  @at-root {
+    &l-10 {
+      margin-left: 10px;
+    }
+  }
+}
+
+.move-right {
+  float: right;
+}
