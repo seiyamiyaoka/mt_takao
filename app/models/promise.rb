@@ -1,9 +1,12 @@
 class Promise < ActiveRecord::Base
   belongs_to :user
   has_many :reculutement
+
   validates :title, presence: true
   validates :content, presence: true
   validate :before_limit_time
+
+  mount_uploader :image, ImageUploader
 
   def before_limit_time
     if limit_time > promise_time

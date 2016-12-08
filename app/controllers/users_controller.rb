@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @promises = Promise.all
   end
 
   def edit

@@ -1,23 +1,50 @@
 .l-container
-  .mypage
-    .mypage__prof
-      .mypage__prof__info
-        h3.heading-lg プロフィール
-        ul.mypage__prof__info__list
-          li.mypage__prof__info__list__item
-            h4.heading-sm 性別
-            p.mypage__prof__info__answer = @user.gender
-          li.mypage__prof__info__list__item
-            h4.heading-sm 生年月日
-            p.mypage__prof__info__answer = @user.birthday
-          li.mypage__prof__info__list__item
-            h4.heading-sm 自己紹介
-            p.mypage__prof__info__answer = get_self_introduction(@user)
-      .mypage__prof__avatar
-        = image_tag get_image(@user), class: 'mypage__prof__avatar__image'
-        p.mypage__prof__avatar__name = @user.name + "(22)"
+  .row
+    .col-md-3
+      .panel.panel-default.profile-area
+        = image_tag get_image(@user), class: 'profile-image'
+        p.profile-name
+          = @user.name + " (#{calc_age(@user.birthday)})"
+        .field
+          = simple_format get_self_introduction(@user)
+        .field
+          ul.menu-list
+            = link_to edit_user_path(@user) do
+              li.menu-list-item
+                span.glyphicon.glyphicon-user
+                'プロフィール編集 
+            = link_to new_promise_path do
+              li.menu-list-item
+                span.glyphicon.glyphicon-picture
+                '待ち合わせ募集
+            = link_to promises_path do
+              li.menu-list-item
+                span.glyphicon.glyphicon-exclamation-sign
+                '待ち合わせ確認
+    .col-md-9
+      .panel.panel-default
+        .panel-heading 待ち合わせ
+        .panel-body
+          ul.media-list
+            - @promises.each do |promise|
+              li.media.list-item
+                a.media-left
+                  = image_tag promise.image, class: 'image-sm'
+                .media-body
+                  h4.media-heading = promise.title
+                  p.list-text = "登山日: #{l(promise.promise_time, format: :promise)}"
+                  p.list-text = "募集締切: #{l(promise.limit_time, format: :promise)}"
+          = link_to 'すべての待ち合わせをみる', promises_path
+      .panel.panel-default
+        .panel-heading
+          span 応募
+          div.move-right
+            = link_to "主催", participants_path, { name: "my", remote: true, class: 'btn btn-sm btn-primary' }
+            = link_to "参加", participants_path, { name: "your", remote: true, class: 'btn btn-sm btn-warning mgl-10' }
+        .panel-body#participants_list
+          = render partial: 'participants/list', locals: { promises: @promises }
 
-    .mypage__promise
+
     
   
   
