@@ -4,6 +4,7 @@
     <title>Mt.Takao</title>
     <%= stylesheet_link_tag 'landing/application', media: 'all' %>
     <%= csrf_meta_tags %>
+    <%= analytics_init if Rails.env.production? %>
   </head>
   <body>
     <div id="fh5co-wrapper">
@@ -12,7 +13,7 @@
         <%= yield %>
         <%= render partial: 'shared/landing/footer' %>
       </div>
-    </div>  
+    </div>
     <%= javascript_include_tag 'landing/application' %>
   </body>
 </html>
