@@ -23,6 +23,15 @@
   }
 }
 
+.promise {
+  @at-root {
+    &-image {
+      max-height: 300px;
+      width: 100%;
+    }
+  }
+}
+
 .menu-list {
   padding: 0;
   width: 100%;

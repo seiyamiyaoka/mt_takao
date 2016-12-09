@@ -28,7 +28,7 @@
           ul.media-list
             - @promises.each do |promise|
               li.media.list-item
-                a.media-left
+                = link_to promise_path(promise), class: 'media-left'
                   = image_tag promise.image, class: 'image-sm'
                 .media-body
                   h4.media-heading = promise.title
